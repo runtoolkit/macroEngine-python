@@ -22,7 +22,7 @@ alias ame-extract="python3 \"$_AME_DIR/extract.py\""
 alias ame-lint="python3 \"$_AME_DIR/lint.py\""
 alias ame-pack="python3 \"$_AME_DIR/pack.py\""
 alias ame-validate="python3 \"$_AME_DIR/validate.py\""
-alias ame-init="python3 \"$_AME_DIR/build.py\""
+alias ame-init="python3 \"$_AME_DIR/build_dp.py\""
 
 echo "[ame] Aliases loaded from: $_AME_DIR"
 echo "  ame-extract   ame-lint   ame-pack   ame-validate   ame-init"
