@@ -1,4 +1,3 @@
-
 # macroEngine-python
 
 Python toolchain for **Advanced Macro Engine** (macroEngine-dp) datapack development.
@@ -34,6 +33,19 @@ echo "source $(pwd)/aliases.sh" >> ~/.bashrc  # or ~/.zshrc
 ```
 
 ## Tools
+
+### `init.py`
+Initialize a new macroEngine datapack project with the standard directory structure.
+
+```bash
+python3 init.py <project_name> [output_dir]
+# or with alias:
+ame-init <project_name> [output_dir]
+```
+
+**Arguments:**
+- `project_name` - Name of the new datapack project
+- `output_dir` - (Optional) Directory to create the project in (defaults to current directory)
 
 ### `extract.py`
 Extract datapack structure from a built pack.
@@ -86,6 +98,7 @@ ame-validate [build_path]
 ```
 macroEngine-python/
 ├── aliases.sh        # Shell alias definitions
+├── init.py           # Project initialization tool
 ├── extract.py        # Datapack extraction tool
 ├── lint.py           # Mcfunction linter
 ├── pack.py           # Datapack packaging tool
@@ -95,6 +108,12 @@ macroEngine-python/
 ```
 
 ## Usage Examples
+
+### Initialize a new project
+```bash
+ame-init my-datapack
+ame-init my-datapack ./projects/
+```
 
 ### Validate before commit
 ```bash
