@@ -1,4 +1,5 @@
 import os
+import sys
 
 # Auto-generated — 3207 files
 
@@ -3212,10 +3213,14 @@ FILES = [
     ('./1_20_5/data/minecraft/tags/functions/tick.json', '{\n  "values": [\n    "#macro:loop"\n  ]\n}'),
 ]
 
+out_dir = sys.argv[1] if len(sys.argv) > 1 else "."
+os.makedirs(out_dir, exist_ok=True)
+
 for path, content in FILES:
-    d = os.path.dirname(path)
+    full_path = os.path.join(out_dir, path)
+    d = os.path.dirname(full_path)
     if d:
         os.makedirs(d, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
+    with open(full_path, "w", encoding="utf-8") as f:
         f.write(content)
-print(f"OK — {len(FILES)} files extracted.")
+print(f"OK — {len(FILES)} files extracted to '{out_dir}'.")
